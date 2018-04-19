@@ -1,0 +1,1560 @@
+{
+  "settings": {
+    "name": "My Site",
+    "currentPage": "index.html",
+    "versionFirst": "4.0.14",
+    "uniqCompNum": 32,
+    "versionPublish": "4.7.1",
+    "theme": {
+      "name": "mobirise4",
+      "title": "Mobirise 4",
+      "styling": {
+        "primaryColor": "#149dcc",
+        "secondaryColor": "#ff3366",
+        "successColor": "#F7ED4A",
+        "infoColor": "#82786E",
+        "warningColor": "#879A9F",
+        "dangerColor": "#B1A374",
+        "mainFont": "Rubik",
+        "display1Font": "Rubik",
+        "display1Size": 4.25,
+        "display2Font": "Rubik",
+        "display2Size": 3,
+        "display5Font": "Rubik",
+        "display5Size": 1.5,
+        "display7Font": "Rubik",
+        "display7Size": 1,
+        "display4Font": "Rubik",
+        "display4Size": 1,
+        "isRoundedButtons": true,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": [
+        "#554346"
+      ]
+    },
+    "path": "@PROJECT_PATH@"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "H1": {
+              "color": "#232323",
+              "text-align": "left"
+            }
+          },
+          "_name": "header1",
+          "_customHTML": "<section class=\"header1\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/spotkania-lesne-iv-1920x1904.jpg\" selected parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#886586\">\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"mbr-white col-md-10\">\n                <h1 class=\"mbr-section-title align-center mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">\n                    <br>&nbsp; &nbsp; &nbsp; <br>&nbsp; &nbsp; ARTUR POPEK ART</h1>\n                <h3 class=\"mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showSubTitle\"></h3>\n                <p class=\"mbr-text align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\"></p>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-primary\" href=\"https://mobirise.com\"><span class=\"mbri-layers mbr-iconfont mbr-iconfont-btn\"></span>\n                        PRINTS</a></div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_cid": "qPHaC7Lk12",
+          "_anchor": "header1-i",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".content-slider": {
+              "display": "flex",
+              "justify-content": "center"
+            },
+            ".modal-body .close": {
+              "background": "#1b1b1b"
+            },
+            ".modal-body .close span": {
+              "font-style": "normal"
+            },
+            ".carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev": {
+              "display": "flex"
+            },
+            ".carousel-control .icon-next, .carousel-control .icon-prev": {
+              "margin-top": "-18px",
+              "font-size": "40px",
+              "line-height": "27px"
+            },
+            ".carousel-control:hover": {
+              "background": "#1b1b1b",
+              "color": "#fff",
+              "opacity": "1"
+            },
+            "@media (max-width: 767px)": {
+              ".container .carousel-control": {
+                "margin-bottom": "0"
+              },
+              ".content-slider-wrap": {
+                "width": "100%!important"
+              }
+            },
+            ".boxed-slider": {
+              "position": "relative",
+              "padding": "93px 0"
+            },
+            ".boxed-slider > div": {
+              "position": "relative"
+            },
+            ".container img": {
+              "width": "100%"
+            },
+            ".container img + .row": {
+              "position": "absolute",
+              "top": "50%",
+              "left": "0",
+              "right": "0",
+              "-webkit-transform": "translateY(-50%)",
+              "-moz-transform": "translateY(-50%)",
+              "transform": "translateY(-50%)",
+              "z-index": "2"
+            },
+            ".mbr-section": {
+              "padding": "0",
+              "background-attachment": "scroll"
+            },
+            ".mbr-table-cell": {
+              "padding": "0"
+            },
+            ".container .carousel-indicators": {
+              "margin-bottom": "3px"
+            },
+            ".carousel-caption": {
+              "top": "50%",
+              "right": "0",
+              "bottom": "auto",
+              "left": "0",
+              "display": "flex",
+              "align-items": "center",
+              "-webkit-transform": "translateY(-50%)",
+              "transform": "translateY(-50%)"
+            },
+            ".mbr-overlay": {
+              "z-index": "1"
+            },
+            ".container-slide.container": {
+              "width": "100%",
+              "min-height": "100vh",
+              "padding": "0"
+            },
+            ".carousel-item": {
+              "background-position": "50% 50%",
+              "background-repeat": "no-repeat",
+              "background-size": "cover",
+              "-o-transition": "-o-transform 0.6s ease-in-out",
+              "-webkit-transition": "-webkit-transform 0.6s ease-in-out",
+              "transition": "transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out, -o-transform 0.6s ease-in-out",
+              "-webkit-backface-visibility": "hidden",
+              "backface-visibility": "hidden",
+              "-webkit-perspective": "1000px",
+              "perspective": "1000px",
+              ".container": {
+                "@media (max-width: 576px)": {
+                  "width": "100%"
+                }
+              }
+            },
+            ".carousel-item-next.carousel-item-left, .carousel-item-prev.carousel-item-right": {
+              "-webkit-transform": "translate3d(0, 0, 0)",
+              "transform": "translate3d(0, 0, 0)"
+            },
+            ".active.carousel-item-right, .carousel-item-next": {
+              "-webkit-transform": "translate3d(100%, 0, 0)",
+              "transform": "translate3d(100%, 0, 0)"
+            },
+            ".active.carousel-item-left, .carousel-item-prev": {
+              "-webkit-transform": "translate3d(-100%, 0, 0)",
+              "transform": "translate3d(-100%, 0, 0)"
+            },
+            ".mbr-slider": {
+              ".carousel-control": {
+                "top": "50%",
+                "width": "50px",
+                "height": "50px",
+                "margin-top": "-1.5rem",
+                "font-size": "35px",
+                "background-color": "rgba(0, 0, 0, 0.5)",
+                "border": "2px solid #fff",
+                "border-radius": "50%",
+                "transition": "all .3s",
+                "&.carousel-control-prev": {
+                  "left": "0",
+                  "margin-left": "2.5rem"
+                },
+                "&.carousel-control-next": {
+                  "right": "0",
+                  "margin-right": "2.5rem"
+                },
+                ".mbr-iconfont": {
+                  "font-size": "1.5rem"
+                },
+                "@media (max-width: 767px)": {
+                  "top": "auto",
+                  "bottom": "1rem"
+                }
+              },
+              ".carousel-indicators": {
+                "position": "absolute",
+                "bottom": "0",
+                "margin-bottom": "1.5rem !important",
+                "li": {
+                  "max-width": "15px",
+                  "height": "15px",
+                  "max-height": "15px",
+                  "margin": "3px",
+                  "background-color": "rgba(0, 0, 0, 0.5)",
+                  "border": "2px solid #fff",
+                  "border-radius": "50%",
+                  "opacity": ".5",
+                  "transition": "all .3s",
+                  "&.active, &:hover": {
+                    "opacity": ".9"
+                  },
+                  "&::after, &::before": {
+                    "content": "none"
+                  }
+                },
+                "&.ie-fix": {
+                  "left": "50%",
+                  "display": "block",
+                  "width": "60%",
+                  "margin-left": "-30%",
+                  "text-align": "center"
+                },
+                "@media (max-width: 576px)": {
+                  "display": "none !important"
+                }
+              },
+              "> .container": {
+                "img": {
+                  "width": "100%",
+                  "+ .row": {
+                    "position": "absolute",
+                    "top": "50%",
+                    "right": "0",
+                    "left": "0",
+                    "z-index": "2",
+                    "-moz-transform": "translateY(-50%)",
+                    "-webkit-transform": "translateY(-50%)",
+                    "transform": "translateY(-50%)"
+                  }
+                },
+                ".carousel-indicators": {
+                  "margin-bottom": "3px"
+                },
+                "@media (max-width: 576px)": {
+                  ".carousel-control": {
+                    "margin-bottom": "0"
+                  }
+                }
+              },
+              ".mbr-section": {
+                "padding": "0",
+                "background-attachment": "scroll"
+              },
+              ".mbr-table-cell": {
+                "padding": "0"
+              }
+            },
+            ".carousel-item .container.container-slide": {
+              "position": "initial",
+              "width": "auto",
+              "min-height": "0"
+            },
+            ".full-screen": {
+              ".slider-fullscreen-image": {
+                "min-height": "100vh",
+                "background-repeat": "no-repeat",
+                "background-position": "50% 50%",
+                "background-size": "cover",
+                "&.active": {
+                  "display": "-o-flex"
+                }
+              },
+              "& .container": {
+                "width": "auto",
+                "padding-right": "0",
+                "padding-left": "0"
+              },
+              ".carousel-item .container.container-slide": {
+                "width": "100%",
+                "min-height": "100vh",
+                "padding": "0",
+                "& img": {
+                  "display": "none"
+                }
+              }
+            },
+            ".mbr-background-video-preview": {
+              "position": "absolute",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0"
+            },
+            ".mbr-overlay ~ .container-slide": {
+              "z-index": "auto"
+            },
+            ".mbr-slider.slide .container": {
+              "overflow": "hidden",
+              "padding": "0"
+            },
+            ".carousel-inner": {
+              "height": "100%"
+            },
+            ".slider-fullscreen-image": {
+              "height": "100%",
+              "background": "transparent !important"
+            },
+            ".image_wrapper": {
+              "height": "(@sliderHSize * 1px)",
+              "width": "100%",
+              "position": "relative",
+              "display": "inline-block"
+            },
+            ".image_wrapper img": {
+              "width": "auto !important",
+              "height": "100%"
+            },
+            ".carousel-item .container-slide": {
+              "text-align": "center"
+            },
+            ".content-slider-wrap": {
+              "width": "(@sliderWSize * 1%)"
+            }
+          },
+          "_name": "slider2",
+          "_customHTML": "<section class=\"carousel slide\" group=\"Sliders & Gallery\" plugins=\"YTPlayer,VimeoPlayer,SliderVideo,BootstrapCarouselSwipe\" data-interval=\"false\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <!-- <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked> -->\n        <input type=\"hidden\" name=\"typeSlider\" value=\"headerSlider\" checked>\n        <input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\" inline>\n        <input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\" inline>\n        <input type=\"range\" title=\"Width\" name=\"sliderWSize\" min=\"50\" max=\"100\" step=\"1\" value=\"60\" inline>\n        <input type=\"range\" title=\"Height\" name=\"sliderHSize\" min=\"300\" max=\"700\" step=\"10\" value=\"400\" inline>\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n        <input type=\"carousel\" title=\"Slides\" name=\"slides\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"container content-slider\">\n        <div class=\"content-slider-wrap\">\n            <div mbr-carousel=\"slides\"></div> \n        </div>\n    </div>\n</section>",
+          "_cid": "qPHu7oViKk",
+          "_anchor": "slider2-s",
+          "_protectedParams": [
+            "slides__autoplay",
+            "slides__autoplayInterval",
+            "slides__showBullets",
+            "slides"
+          ],
+          "_global": false,
+          "_once": false,
+          "_params": {
+            "slides__autoplay": false,
+            "slides__autoplayInterval": 4000,
+            "slides__showBullets": true,
+            "slides": [
+              {
+                "image": "@PROJECT_PATH@/assets/images/artur-popek-good-bye-1920x1663.jpg",
+                "active": false,
+                "showButtons": false,
+                "showText": true,
+                "showTitle": false,
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "customStyle1": "display-2",
+                "customStyle2": "display-7",
+                "customStyle3": "display-4",
+                "title": "FULL SCREEN SLIDER",
+                "overlay": true,
+                "contentAlign": "center",
+                "text": "",
+                "buttons": "<a data-app-btn=\"true\" class=\"btn  btn-success\" href=\"https://mobirise.com\">FOR WINDOWS</a> <a data-app-btn=\"true\" class=\"btn  btn-white-outline\" href=\"https://mobirise.com\">FOR MAC</a>",
+                "overlayOpacity": "0"
+              },
+              {
+                "image": "@PROJECT_PATH@/assets/images/myszorek-2000x1500.jpg",
+                "active": true,
+                "showButtons": false,
+                "showText": true,
+                "showTitle": false,
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "customStyle1": "display-2",
+                "customStyle2": "display-7",
+                "customStyle3": "display-4",
+                "title": "IMAGE SLIDE",
+                "overlay": true,
+                "contentAlign": "center",
+                "text": "",
+                "buttons": "<a data-app-btn=\"true\" class=\"btn btn-info\" href=\"https://mobirise.com\">FOR WINDOWS</a> <a data-app-btn=\"true\" class=\"btn  btn-white-outline\" href=\"https://mobirise.com\">FOR MAC</a>",
+                "overlayOpacity": "0"
+              },
+              {
+                "image": "@PROJECT_PATH@/assets/images/artur-popek-submarine-starts-its-cruise-2017-1920x1545.jpg",
+                "active": false,
+                "showButtons": false,
+                "showText": true,
+                "showTitle": false,
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "customStyle1": "display-2",
+                "customStyle2": "display-7",
+                "customStyle3": "display-4",
+                "title": "IMAGE SLIDE",
+                "overlay": true,
+                "contentAlign": "center",
+                "text": "",
+                "buttons": "<a data-app-btn=\"true\" class=\"btn btn-info\" href=\"https://mobirise.com\">FOR WINDOWS</a> <a data-app-btn=\"true\" class=\"btn  btn-white-outline\" href=\"https://mobirise.com\">FOR MAC</a>",
+                "overlayOpacity": "0"
+              },
+              {
+                "image": "@PROJECT_PATH@/assets/images/artur-popek-id-like-2017-1920x1569.jpg",
+                "active": false,
+                "showButtons": false,
+                "showText": true,
+                "showTitle": false,
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "customStyle1": "display-2",
+                "customStyle2": "display-7",
+                "customStyle3": "display-4",
+                "title": "FULL SCREEN SLIDER",
+                "overlay": true,
+                "contentAlign": "center",
+                "text": "",
+                "buttons": "<a data-app-btn=\"true\" class=\"btn  btn-success\" href=\"https://mobirise.com\">FOR WINDOWS</a> <a data-app-btn=\"true\" class=\"btn  btn-white-outline\" href=\"https://mobirise.com\">FOR MAC</a>",
+                "overlayOpacity": "0",
+                "overlayColor": "#ffffff"
+              },
+              {
+                "image": "@PROJECT_PATH@/assets/images/ja-wieczny-imigrantt-1853x1920.jpg",
+                "active": false,
+                "showButtons": false,
+                "showText": true,
+                "showTitle": false,
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "customStyle1": "display-2",
+                "customStyle2": "display-7",
+                "customStyle3": "display-4",
+                "title": "FULL SCREEN SLIDER",
+                "overlay": true,
+                "contentAlign": "center",
+                "text": "",
+                "buttons": "<a data-app-btn=\"true\" class=\"btn  btn-success\" href=\"https://mobirise.com\">FOR WINDOWS</a> <a data-app-btn=\"true\" class=\"btn  btn-white-outline\" href=\"https://mobirise.com\">FOR MAC</a>",
+                "overlayOpacity": "0"
+              },
+              {
+                "image": "@PROJECT_PATH@/assets/images/operowa-modosc-bazyla-1474x1260.jpg",
+                "active": false,
+                "showButtons": false,
+                "showText": true,
+                "showTitle": false,
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "customStyle1": "display-2",
+                "customStyle2": "display-7",
+                "customStyle3": "display-4",
+                "title": "FULL SCREEN SLIDER",
+                "overlay": true,
+                "contentAlign": "center",
+                "text": "",
+                "buttons": "<a data-app-btn=\"true\" class=\"btn  btn-success\" href=\"https://mobirise.com\">FOR WINDOWS</a> <a data-app-btn=\"true\" class=\"btn  btn-white-outline\" href=\"https://mobirise.com\">FOR MAC</a>",
+                "overlayOpacity": "0"
+              }
+            ]
+          }
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-slider .carousel-control": {
+              "background": "#1b1b1b"
+            },
+            ".mbr-slider .carousel-control-prev": {
+              "left": "0",
+              "margin-left": "2.5rem"
+            },
+            ".mbr-slider .carousel-control-next": {
+              "right": "0",
+              "margin-right": "2.5rem"
+            },
+            ".mbr-slider .modal-body .close": {
+              "background": "#1b1b1b"
+            },
+            ".mbr-gallery-item > div::before": {
+              "content": "''",
+              "position": "absolute",
+              "left": "0",
+              "top": "0",
+              "width": "100%",
+              "height": "100%",
+              "background": "@overlayColor",
+              "& when (@gradOverlay)": {
+                "background": "linear-gradient(to left, @overlayColor, @overlayColor2) !important"
+              },
+              "opacity": "0",
+              "-webkit-transition": "0.2s opacity ease-in-out",
+              "transition": "0.2s opacity ease-in-out"
+            },
+            ".mbr-gallery-item > div:hover": {
+              ".mbr-gallery-title::before": {
+                "background": "transparent !important"
+              },
+              "&:before": {
+                "opacity": "@overlayOpacity !important"
+              }
+            },
+            ".mbr-gallery-title": {
+              "font-size": ".9em",
+              "position": "absolute",
+              "display": "block",
+              "width": "100%",
+              "bottom": "0",
+              "padding": "1rem",
+              "color": "#fff",
+              "z-index": "2",
+              "&:before": {
+                "content": "\" \"",
+                "width": "100%",
+                "height": "100%",
+                "top": "0",
+                "left": "0",
+                "z-index": "-1",
+                "position": "absolute",
+                "background": "@overlayColor !important",
+                "& when (@gradOverlay)": {
+                  "background": "linear-gradient(to left, @overlayColor, @overlayColor2) !important"
+                },
+                "opacity": "@overlayOpacity",
+                "-webkit-transition": "0.2s background ease-in-out",
+                "transition": "0.2s background ease-in-out"
+              }
+            }
+          },
+          "_name": "gallery2",
+          "_customHTML": "<section class=\"mbr-gallery mbr-slider-carousel\" group=\"Sliders & Gallery\" plugins=\"Masonry,BootstrapCarouselSwipe,Gallery,VimeoPlayer,SliderVideo\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" inline>\n        <input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" inline>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\">\n        <input type=\"checkbox\" title=\"Gradient Overlay\" name=\"gradOverlay\">\n        <input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" value=\"#45505b\" condition=\"gradOverlay\">\n        <input type=\"range\" title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" inline>\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n\n        <input type=\"gallery\" title=\"Gallery\" name=\"gallery\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': !fullWidth}\">\n        <div mbr-gallery=\"gallery\" mbr-gallery-spacing=\"2\" mbr-gallery-show-filter></div>\n    </div>\n\n</section>",
+          "_cid": "qPHv9uLHMl",
+          "_anchor": "gallery2-t",
+          "_protectedParams": [
+            "text_all",
+            "gallery__filtersTextStyle",
+            "gallery__filtersBtnStyle",
+            "gallery"
+          ],
+          "_global": false,
+          "_once": false,
+          "_params": {
+            "text_all": "All",
+            "gallery__filtersTextStyle": "display-7",
+            "gallery__filtersBtnStyle": "btn-primary-outline",
+            "gallery": [
+              {
+                "tags": "PAINTINGS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/figowa-tarcza-1200x1200.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/figowa-tarcza-1200x1200-800x800.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PAINTINGS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/gliniana-para-dziamolka-i-jej-cichy-partner-1200x1180.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/gliniana-para-dziamolka-i-jej-cichy-partner-1200x1180-800x787.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PAINTINGS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/papuaska-mapa-eglarska-collage-akryl-100x100-2014-1200x1200.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/papuaska-mapa-eglarska-collage-akryl-100x100-2014-1200x1200-800x800.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PAINTINGS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/shield-4-1000x1000.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/shield-4-1000x1000-800x800.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PAINTINGS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/parasolkaa-1189x1200.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/parasolkaa-1189x1200-800x807.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PAINTINGS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/cegielnia-1279x1279.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/cegielnia-1279x1279-800x800.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PAINTINGS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/shield-3-1000x1000.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/shield-3-1000x1000-800x800.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PAINTINGS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/obraz-hodowany-1200x1200.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/obraz-hodowany-1200x1200-800x800.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PAINTINGS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/glowy-926x926.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/glowy-926x926-800x800.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PAINTINGS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/prosi-ziemne-olej-alryl-na-ptnie-100x150cm-2015-1200x768.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/prosi-ziemne-olej-alryl-na-ptnie-100x150cm-2015-1200x768-800x512.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PAINTINGS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/smutny-sonik-dziekaski-collage-akryl-olej-na-ptnie-100x100-cm-2013-1200x1180.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/smutny-sonik-dziekaski-collage-akryl-olej-na-ptnie-100x100-cm-2013-1200x1180-800x787.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PAINTINGS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/dotyk-915x915.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/dotyk-915x915-800x800.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PAINTINGS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/hole-in-jesolo2-600x600.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/hole-in-jesolo2-600x600-600x600.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PAINTINGS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/biedronka-zelazna2-600x600.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/biedronka-zelazna2-600x600-600x600.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PAINTINGS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/psia-913x913.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/psia-913x913-800x800.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PAINTINGS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/miasto-1000x1000.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/miasto-1000x1000-800x800.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PAINTINGS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/miedziana-arka-1200x963.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/miedziana-arka-1200x963-800x642.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PAINTINGS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/horse-trap-1200x1200.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/horse-trap-1200x1200-800x800.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/artur-popek-chodz-za-mn-marynaty-1873x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/artur-popek-chodz-za-mn-marynaty-1873x1920-800x820.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/ania-i-tomek-1920x1576.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/ania-i-tomek-1920x1576-800x657.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/artur-popek-good-bye-1920x1663.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/artur-popek-good-bye-1920x1663-800x693.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/wen-1915x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/wen-1915x1920-800x802.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/wyprawa-po-seksown-1795x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/wyprawa-po-seksown-1795x1920-800x856.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/skrzydlatych-zaprzgw-strze-si-wdrowcze-akwaforta-akwatinta-10x10-cm-2000-1844x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/skrzydlatych-zaprzgw-strze-si-wdrowcze-akwaforta-akwatinta-10x10-cm-2000-1844x1920-800x833.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/czolg1-1902x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/czolg1-1902x1920-800x808.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/artur-popek-id-like-2017-1920x1569.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/artur-popek-id-like-2017-1920x1569-800x654.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/ania-szuka-feka-na-montmartrze-akwaforta-akwatinta-10x10-cm-1999-1847x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/ania-szuka-feka-na-montmartrze-akwaforta-akwatinta-10x10-cm-1999-1847x1920-800x832.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/artur-popek-bitwa-hahamogna-panorama-1920x960.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/artur-popek-bitwa-hahamogna-panorama-1920x960-800x400.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/bardzo-dziwne-1885x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/bardzo-dziwne-1885x1920-800x815.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/artur-popek-submarine-starts-its-cruise-2017-1920x1545.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/artur-popek-submarine-starts-its-cruise-2017-1920x1545-800x644.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/artur-popek-rancho-el-rincon-panorama-1920x960.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/artur-popek-rancho-el-rincon-panorama-1920x960-800x400.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/myszorek-2000x1500.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/myszorek-2000x1500-800x600.jpg",
+                "alt": "",
+                "title": "poster by Leonard Konopelski",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/cisza-a-1600x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/cisza-a-1600x1920-800x960.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/ania-1920x1437.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/ania-1920x1437-800x599.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/co-twoje-zwierze-podm-1571x1630.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/co-twoje-zwierze-podm-1571x1630-800x830.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/dotyk-wiatru-1783x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/dotyk-wiatru-1783x1920-800x861.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/drzewo-niespodzianek-1861x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/drzewo-niespodzianek-1861x1920-800x825.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/gwiezdna-latarnia-1393x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/gwiezdna-latarnia-1393x1920-800x1103.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/ja-wieczny-imigrantt-1853x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/ja-wieczny-imigrantt-1853x1920-800x829.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/jaknas1-1920x1898.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/jaknas1-1920x1898-800x791.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/jeszcze-jeden-1881x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/jeszcze-jeden-1881x1920-800x817.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/kociec-1613x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/kociec-1613x1920-800x952.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/kuszenie-1920x1913.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/kuszenie-1920x1913-800x797.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/lito1-1338x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/lito1-1338x1920-800x1148.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/mae-jesie-1870x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/mae-jesie-1870x1920-800x821.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/mezczyzna-1848x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/mezczyzna-1848x1920-800x831.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/mozesz-mnie-zjesc-1413x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/mozesz-mnie-zjesc-1413x1920-800x1087.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/na-zdrowie-powiedzia-kina-akwaforta-akwatinta-10x10-cm-2000-1738x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/na-zdrowie-powiedzia-kina-akwaforta-akwatinta-10x10-cm-2000-1738x1920-800x884.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/nasza-pierwsza-maszyna-do-robienia-buziaczkw-akwaforta-akwatinta-10x10-cm-1998-1751x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/nasza-pierwsza-maszyna-do-robienia-buziaczkw-akwaforta-akwatinta-10x10-cm-1998-1751x1920-800x877.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/nauka-latania-1528x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/nauka-latania-1528x1920-800x1005.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/neron-1920x1914.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/neron-1920x1914-800x798.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/pamieci-sprzedanych-koni-caly-1920x1490.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/pamieci-sprzedanych-koni-caly-1920x1490-800x621.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/pasadena-1920x1919.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/pasadena-1920x1919-800x800.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/pierwsza-koza-na-marsie-2017-1920x1897.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/pierwsza-koza-na-marsie-2017-1920x1897-800x790.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/skrzydlatych-zaprzgw-strze-si-wdrowcze-akwaforta-akwatinta-10x10-cm-2000-1844x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/skrzydlatych-zaprzgw-strze-si-wdrowcze-akwaforta-akwatinta-10x10-cm-2000-1844x1920-800x833.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/slon-1784x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/slon-1784x1920-800x861.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/spotkania-lesne-iv-1920x1904.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/spotkania-lesne-iv-1920x1904-800x793.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/spotkania-lesne-iv-1920x1904.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/spotkania-lesne-iv-1920x1904-800x793.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/spotkania-lene-1-1767x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/spotkania-lene-1-1767x1920-800x869.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/spotkania-lene-2-1473x1594.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/spotkania-lene-2-1473x1594-800x866.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/wszyscy-jestesmy-1920x1438.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/wszyscy-jestesmy-1920x1438-800x599.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/wysnu-1920x1216.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/wysnu-1920x1216-800x507.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PRINTS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/wysoko-nad-miastem-o-zachodzie-soca-sucha-iga-akwatinta-65x50cm-1997-1436x1920.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/wysoko-nad-miastem-o-zachodzie-soca-sucha-iga-akwatinta-65x50cm-1997-1436x1920-800x1070.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "EXHIBITIONS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/29594914-10213410282365958-4714057730531286523-n-720x960.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/29594914-10213410282365958-4714057730531286523-n-720x960-720x960.jpg",
+                "alt": "",
+                "title": "poster by Leonard Konopelski",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "EXHIBITIONS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/29542457-10213391795023786-876383543432752264-n-722x960.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/29542457-10213391795023786-876383543432752264-n-722x960-722x960.jpg",
+                "alt": "",
+                "title": "poster by Leonard Konopelski",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PAINTINGS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/rybka-1000x1000.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/rybka-1000x1000-800x800.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": true
+              },
+              {
+                "tags": "PAINTINGS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/4-tarcze-grajace2-600x600.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/4-tarcze-grajace2-600x600-600x600.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PAINTINGS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/miedziana-para2-600x600.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/miedziana-para2-600x600-600x600.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "PAINTINGS",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/three-bottles2-600x600.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/three-bottles2-600x600-600x600.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              }
+            ]
+          }
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "H2": {
+              "color": "#232323",
+              "text-align": "left"
+            }
+          },
+          "_name": "content5",
+          "_customHTML": "<section class=\"mbr-section content5\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/spotkania-lesne-iv-1920x1904.jpg\" selected parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#0f7699\">\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"title col-12 col-md-8\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center mbr-bold mbr-white pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\"><br>O mojej twórczości\n<div>Pomiędzy grafiką i malarstwem</div></h2>\n                <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-white pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\">\n                    Article header with background image and parallax effect\n                </h3>\n                <p class=\"mbr-text align-center mbr-white pb-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-if=\"showText\" mbr-article data-multiline>\n                    Shape your future web project with sharp design and refine coded functions\n                </p>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\">\n                    <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n                    <a class=\"btn btn-white-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qPHM35pPi3",
+          "_anchor": "content5-u",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".line": {
+              "background-color": "@lineColor",
+              "color": "@lineColor",
+              "align": "center",
+              "height": "2px",
+              "margin": "0 auto"
+            },
+            ".section-text": {
+              "padding": "2rem 0"
+            },
+            ".inner-container": {
+              "margin": "0 auto"
+            },
+            "@media (max-width: 768px)": {
+              ".inner-container": {
+                "width": "100% !important"
+              }
+            }
+          },
+          "_name": "content9",
+          "_customHTML": "<section class=\"mbr-section article content9\" group=\"Article\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Text Width\" name=\"innerWidth\" min=\"50\" max=\"100\" step=\"1\" value=\"100\">\n        <input type=\"range\" inline title=\"Line Width\" name=\"lineLength\" min=\"10\" max=\"100\" step=\"1\" value=\"25\">\n        <input type=\"color\" title=\"Line Color\" name=\"lineColor\" value=\"#149dcc\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"inner-container\" mbr-style=\"{'width': innerWidth + '%'}\">\n            <hr class=\"line\" mbr-style=\"{'width': lineLength + '%'}\">\n            <div class=\"section-text align-center mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".section-text\" mbr-text>\n                    Pytania\n                <div>\n</div><div>Jeżeli można by jeszcze raz przeżyć swoje życie to czy dokonałoby się podobnych wyborów i czy nie uważa się lat przeszłych za stracone. Przywiedziony przez potyczki ze zdrowiem znalazłem się w sytuacji wielkiej niewiadomej, nastawienia na to, że wszystko się może skończyć z minuty na minutę, ot taki prywatny koniec świata. Zmusiło mnie to do zdecydowanego i bezwzględnie szczerego rozliczenia się z całym moim dotychczasowym żywotem oraz tym, co po sobie zostawię. Okazja do podsumowania własnej drogi twórczej niesie szersze implikacje – jeśli poświęciłem się całkowicie grafice i malarstwu, pojawia się pytanie – czy warto nadać właśnie taki sens swojemu życiu. Często wyrażane są opinie, że artyści mają pewną łatwość egzystencjalną, jako extra bonus od natury. Zostawiają dla potomności wartości zamknięte w małych fragmentach materii. Trzeba czasu by było wiadome, co i ile z nich samych przetrwa, a co stanie się jedynie oderwaną cząstką rzeczywistości, interpretowaną coraz to inaczej przez kolejne pokolenia. \n</div><div>Czy rozpaczliwe pytanie o sens poczynań w ogóle jest potrzebne? Czy nie należy po prostu poddać się nurtowi rzeki i szukać sensu w każdym kolejnym dniu, a nie w ciągłości lat? Na talent nie można zasłużyć, spada on na jednych niespodziewanie, inni żebrzą o niego na próżno. Jeśli talent (mniejszy lub większy) otrzymujemy ot tak, to czy nie jest pychą wobec Opatrzności usilne wdrapywanie się na piedestał?\n</div><div>\n</div><div>Inspiracje\n</div><div>\n</div><div>Interesuje mnie tak wiele, że każdy nowy dzień jest wyzwaniem dla żarłocznych zmysłów. Raduję się i trwożę, być może zbyt przesadnie reagując na otaczający świat. W miarę upływu lat nauczyłem się pokorniejszego reagowania na otaczającą rzeczywistość: łatwiej mi zrewidować własne poglądy, przyznać się do niewiedzy. W swoich pracach nie staram się oceniać, najważniejsze jest dla mnie wczucie się w sytuacje drugiego człowieka, próba zrozumienia motywów jego działania, choć czasami zdają się być skrajnie odpychające lub bestialsko okrutne. Wszystkie dostępne zmysły są ważne, czasami synergia bodźców jest tak intensywna, że czuję zapach i smak kolorów, dotykam temperatury dźwięków. To wszystko finalnie przemienia się w świat wrażeń wzrokowych, zarówno tych docierających za pomocą oczu jak i kłębiących się w wyobraźni.\n</div><div>Ogrom i bezkres natury poraża mnie i uczy pokory. Jest to mój główny impuls do podróży. Usiłuję też podróżować w czasie. Rozumienie historii wymaga przechwycenia cząstki z jej upływającego czasu. To, co odległe, staje się nagle dotykalne dzięki uświadomieniu sobie, że człowiek tak samo przeżywa radość, miłość, lęk, upodlenie, nienawiść jak przed latami czy wiekami. \n</div><div>Nauczyliśmy się wierzyć w cywilizację, w nieodzowność jej wytworów. Często kryje się za tym mechanizm wzbudzania nowej potrzeby, by ktoś mógł ją natychmiast sprzedać, przynaglając do kolejnego rodzaju konsumpcji. Unikam wartości i potrzeb narzucanych mi przez innych, czasami nawet przekornie reaguję z tym większym uporem, z im większą perswazją się spotykam. \n</div><div>\n</div><div>Proces\n</div><div>\n</div><div>Najważniejsze zaczyna się w momencie przekroczenia bariery działań intencjonalnych, uprzednio przygotowanego planu. Jest w tym jakaś taoistyczna zgoda na poddawanie się intuicji, na podążanie za twórczym instynktem. \n</div><div>W procesie powstawania dzieła nadchodzi moment, kiedy wytwór przejmuje kontrolę nad tworzącym i pozwala mu uzupełniać pustkę we własnym spójnym systemie.  Trudno jest wytłumaczyć, czym jest doznanie olśnienia, kiedy problem o nieskończonej liczbie rozwiązań pojawia się jako jednoznaczny, klarowny i spójny. \n</div><div>Walka z własną słabością – etapy tworzenia, pustka białej kartki, poczucie bezużyteczności, nieoryginalności. Istotę takiego stanu oddaje istniejący w Islamie termin dżahilijja, oznaczający ciemność i niewiedzę, które trzeba przezwyciężyć. Jeśli to zignoruję, wychodzą prace niechciane, obce, patrzące na mnie krzywo od samego początku. W końcu to sam nakładam sobie szelki tragarza i mam nadzieje, ze  będą one źródłem radości. \n</div><div>Przychodzi moment, że praca zaczyna porywać, dominuje, wciąga i prowadzi za rękę. To nie jest wymyślanie od nowa, to wkraczanie do świata istniejącego w równoległej rzeczywistości. \n</div><div>Snucie planów stanowi cząstkę radości, tak samo jak potem wspominanie świetnych chwil. Praca nad obrazem też ma swoje fazy, najpierw coś wykluwa się, zamysł niekształtny, złożony z ulotnych emocji, retrospekcji rozmytych przez czas, przeczuć, snów, lęków, czy nawet jednostajności nic-nie-dziania się, nawijanej na kolejne warstwy świadomości i przykrywanej następnymi. Czasami wymyślanie nowej pracy przywodzi na myśl sny o lataniu. Wydaje się, że to tylko kwestia wyćwiczenia mięśni rąk, by machać tak szybko, żeby umożliwiło to uniesienie się w powietrze. Dość niezgrabne jest samo wzbicie się w przestworza. Potem wszystko staje się płynne, harmonijne, liczy się poddanie prądom wznoszącym i zstępującym, ptasia intuicja, rozumienie przestrzeni. Budzi się radość szybowania, nieporównywalna z innymi doznaniami. \n</div><div>Jeżeli przyjmiemy za pewnik, że gatunek ludzki jest w procesie nieustannego rozwoju, a przy tym dokonania poszczególnych jednostek kończą się wraz z ich odejściem, powstaje pytanie – co jest nośnikiem informacyjnym zmian jakościowych dla następnych pokoleń. Czy inaczej ujmując: w jakim stopniu jako gatunek ludzki jesteśmy zdolni do natychmiastowego dziedziczenia – z pokolenia na pokolenie. Jestem przekonany, że szybkie dziedziczenie genetyczne jest nie tylko możliwe ale wręcz stanowi główne źródło danych dla naszych nieświadomych i podświadomych  poczynań. U Karola Gustawa Junga pojawia się myślenie archetypiczne. Zastanowiła mnie minimalna wymagalna liczba pokoleń niezbędna do uruchomienia tych mechanizmów. Jung mówi o dość nieokreślonym, aczkolwiek niezmiernie długim upływie czasu. Czymś, co zaszło w prehistorii i wdrukowało się na zawsze w ludzką wrażliwość.\n</div><div>Warsztat\n</div><div>\n</div><div>Spotykałem się w różnych częściach świata z grafikami warsztatowymi i naturalne było, że rozmowa schodziła na sprawy grafiki, sposobów technicznych, środków wyrazu itp. Zdumiewające było jak niewiele słów zazwyczaj potrzebnych było do porozumienia, do zaprezentowania swojego stanu wiedzy, do wyłuskania różnic i podzielenia się tajnikami warsztatu, istotą twórczości.\n</div><div>Nie mogę przezwyciężyć uprzedzeń wobec kierunków odrzucających bądź ignorujących warsztat. Wydaje się jednak, że zbalansowanie proporcji pomiędzy myśleniem twórczym, a rzemiosłem jest szalenie ważne. Wytwarzanie struktur imaginacyjnych nie mających swojej kontynuacji w wytworze materialnym jest narażone na  mnóstwo pułapek, niesprawdzalności, ulotności, monosensoryczności. Kontakt z rzeczywistością zubożoną o pewne zmysły, albo o wyrazistość bodźców, zwłaszcza wzrokowych, staje się doznaniem pośrednim i jest jak podróżowanie palcem po mapie.\n</div><div>\n</div><div>O moich pracach\n</div><div>\n</div><div>Spotkania leśne\n</div><div>\n</div><div>Cykle roślinne, leśne. Mam wrażenie, że mój rozwój artystyczny stał się powtórzeniem moich losów, tylko ze sporym opóźnieniem. To jak powtórzenie historii życia we własnym świecie grafiki i malarstwa. Proces uwalniania się doświadczeń zachodzi z pewnym trudem,  wydobywanie na wierzch, nawet powtórne chowanie wypieranych rzeczywistości, czasem jedyną drogą jest język znaków graficznych. Zazwyczaj zrozumienie przychodzi po pewnym czasie. Natchnienie to balansowanie na granicy transu, czuję się jakby moimi działaniami kierowała zewnętrzna siłą, nie do końca zrozumiała, po pewnym czasie wszystko zaczyna się tłumaczyć, wyjaśniać. To jak domykanie koła w ciemności przez dwie różne osoby. Wychodzimy z tego samego punktu, oddalamy się i raptem okazuje się, że linie spotykają się precyzyjnie, jakby uwięzione w zaplanowanych ściśle gestach, jedynie możliwym przebiegu. Nie potrafię być może reagować natychmiast, zwłaszcza korzystać z biblioteki doznań nieświadomych, zapisanych w peryferiach umysłu. Doznana rzeczywistość musi być przepuszczona przez kolejne pokłady podświadomości, by nabrać konkretnych kształtów. Czasami w związku z tym trudno mi podać praprzyczynę pewnych zjawisk, ale przy odrobinie dystansu czasowego wszystko powoli tłumaczy się i wyjaśnia. \n</div><div>Od najmłodszych świadomych dni byłem wrośnięty w naturę, uczyłem się rozumieć warstwy ziemi, odgadywać niegdysiejsze zdarzenia z jej zapachu, koloru, zachowanych drobinek, mikrośladów ludzkich szczęśliwości i tragedii. Uczyłem się uporu skrzypu wrastającego w jałowiznę, łagodności styliska wypolerowanego przez lata ludzkich dotknięć. Pojawiają się wobec tego w moich pracach z połowy lat 80-tych ubiegłego stulecia światy roślinno-ziemne, neuro-dendryty oplatające kompozycje ciasnymi ramami. Wracam w najwcześniejsze lata dzieciństwa spędzone na wsi. Nie chodzi tylko o najściślejszy kontakt z naturą, naukę rozumienia jej, akceptację nieuchronności, pokorę wobec potęgi.  Lubiłem prowokować los leżąc w czasie burzy na pustym polu, czując całym wnętrzem pioruny bijące tuż tuż. \n</div><div>„Drzewo niespodzianek”,  „Spotkania leśne”, „Cisza” czy z większych formatów „Pamięci sprzedanych koni” to regresywne zwinięcie się w kłębek, równoległe życie z opóźnionym o 20 lat początkiem. Człowiek: portret, cała postać pojawia się z tęsknoty w tej leśnej samotności, z głodu serca, z zagubienia, wątpliwości i przeczuwanych potencjałów. Wczesne lata to z jednej strony kraina wszelkich możliwości, z drugiej ciągła niepewność, walka o przyszłość, o znalezienie swojego miejsca wśród ludzi i porządkowanie wnętrza.\n</div><div>\n</div><div>Maszyna do robienia buziaczków\n</div><div>\n</div><div>Gdzieś na początku lat 90-tych zacząłem wracać do dziecięcych rysunków, gdzie istotnym sposobem narracji i kształtowania kompozycji było kompulsywne gromadzenie przedmiotów. Z tych, na pozór bezsensownych kolekcji zacząłem budować własny język, o bardzo szerokich możliwościach interpretacji. \n</div><div>Na początku moje grafiki były jak krótkie opowiadania, można było w nich znaleźć zapiski z upływających dni, wspomnienia z różnych poziomów świadomości, zderzone z marzeniami, frustracjami i niespełnieniami. Wraz z przyjściem na świat dzieci, Ani i Krzysztofa, świat moich grafik popłynął w kierunku wrażliwości dziecka, miękkich fantazji, skupienia się na tym co dobre i piękne, obrony przed złem, niegodziwością i plugawością. Moje grafiki stały się jak bajki, operowały tym niepowtarzalnym poczuciem humoru dostępnym jedynie trzy-, pięciolatkom. Nie znaczy to, że chciałem zdziecinnieć, odsunąć się od świata dorosłych. Jako ojciec poczułem wielką odpowiedzialność za świat moich dzieci i starałem się opowiadać te bajki ze świadomością własnego doświadczenia życiowego i tego co mi wcześniej umknęło, a wreszcie mogło się spełnić w następnym pokoleniu. Tak naprawdę każda z tych historii, pozornie infantylna niosła ze sobą wiele goryczy i próby szukania odpowiedzi na pytania fundamentalne. „Nasza pierwsza maszyna do robienia buziaczków” powstała dość szybko po tym, gdy zaczęliśmy używać komputera, internetu i nowych środków komunikacji jak e-mail. Zauważyłem wtedy, że łatwość i szybkość kontaktów internetowych niosą niebezpieczeństwo ich spłycenia, strywializowania, z drugiej strony ośmielają do ekspresji, trudnej dotąd do wyrażenia. Nowe media, asymilowane zgodnie z naturą człowieka, będą odbiciem jego intencji: czasem dobrych, czasem złych. Teraz wiem, że kula ziemska szalenie zmalała.\n</div><div>\n</div><div>Tarcze\n</div><div>\n</div><div>Tarcze powstały z kilku powodów: budowane przeze mnie artefakty to syndrom obsesyjnego kolekcjonerstwa. Przedmiot w styczności z człowiekiem nabiera nowych cech, staje się nośnikiem jego osobniczej historii, określa czasy, w których żyje. Paradoksalnie rozwój techniki powinien spowodować wydłużanie się trwałości przedmiotów. Dzieje się zupełnie na odwrót, przeważają tu racje ekonomii nad technologią. Jeśli przedmioty użytku osobistego: buty, narzędzia, przechodziły z pokolenia na pokolenie, było to dowodem na jakość wytworzonego produktu, jego trwałość. Przedmiot nasiąkał upływem czasu, wchłaniał kolejne warstwy ludzkich losów i nabierał w końcu magicznej siły. \n</div><div>Maluję tarcze dla moich najbliższych, dla przyjaciół, dla istot w pokrewieństwie dusz i chyba też dla siebie. Chcę, by stanowiły fetysze chroniące przed złem. Pierwowzory tarcz wyławiam w kulturach pradawnych i prymitywnych. Zależy mi na tym, żeby malując te przedmioty wniknąć w ich natywny sposób powstania, przekroczyć barierę materii, dotknąć opracowywanych przedmiotów po drugiej stronie płótna.\n</div><div>\n</div><div>Bestiarium\n</div><div>\n</div><div>Zwierzęta wychodzą niechętnie z ukrycia - mniejsi bracia, mądrzy w swoich ułomnościach, przenoszący w żółtych ślepiach wiedzę pradawną, uczciwą i prostą. Człowiek w próżności swojej stawia na piedestale myśl abstrakcyjną. Jakże głęboko się myli, wytwarzając nowe potrzeby po to tylko, by je zaspakajać. Od zwierząt uczę się tłumaczenia swego przebywania w świadomości. \n</div><div>„I cóż słodszego ponad powietrze” to opowieść o miłości, otaczającej w sposób niezauważalny, jak powietrze. Łatwo można przeoczyć to, co nam dane na co dzień. Dopiero brak uświadamia potrzebę, obnaża nasz egoizm i niezdolność oddawania. O ile w „Tarczach” chodziło mi o ochronę, w „Bestiarium” wystawiam się świadomie na ból myśli ignorowanych, spychanych trwożnie w głąb podświadomości. Zwierzęta mają na ogół krótszy żywot, wpisany w geny. Obserwując ich etapy życia skondensowane do kilkunastu lat możemy uczyć się pokory wobec przemijania.\n</div><div>\n</div><div>Peregrynacje\n</div><div>\n</div><div>Obrazy z cyklu Peregrynacje to zapiski z podróży. Niekoniecznie tych polegających na przemierzaniu kuli ziemskiej. Podróże to zmiany okoliczności, to rzucanie się w wir ryzyka, poznawanie nowego, to ruszanie się z bezpiecznego, dobrze wygrzanego fotela. Powodem takiego wiercipięctwa jest wieczny głód poznania, tęsknota za nieznanym, nawet jeśli nie niosłoby to poznanie niczego konkretnego. Gdy nadchodzi jesień, z jej awiacją obumierających pstrokato liści, moja chęć doznania nowego realizuje się  w nieodpartym pragnieniu, by pobiec bezprzytomnie przed siebie, porykując na przemian to ponuro, to radośnie. \n</div><div>„Tu w Mikulovie zaczniemy nowe życie” to obraz o niespełnieniu, o tym, że lepiej pielęgnować niektóre marzenia, niż odrzeć ze skóry w rzeczywistej, skrzeczącej koincydencji. \n</div><div>W podróżach najważniejsze jest dla mnie wtopienie się w naturalne otoczenie, wczucie się w rytm danego miejsca, zrozumienie pozornej inności ludzi. Bycie w zgodzie z naturą oznacza zrozumienie i zaakceptowanie własnych ograniczeń, wad, ale też umiejętność wykorzystania ich w pozytywny sposób.\n</div><div>Tak jak w cyklu „Tarcze”, który momentami stapia się z „Peregrynacjami” ważne jest obserwowanie oddziaływania czasu na materię, odciskania się pór roku, zjawisk przyrody i codziennego dotyku ludzkich dłoni.\n</div><div>\n</div><div>Odbiorcy\n</div><div>\n</div><div>Widz jest dla mnie bardzo ważny, przedłuża proces tworzenia intensywnością swojego odbioru, reagowaniem emocjonalnym, własną interpretacją. To dość  kuszące – wtopić się anonimowo w tłum odwiedzający wystawę i wsłuchiwać w nieprzymuszone komentarze. Odbiorca jednak nie może rzutować na kształt nowych prac. Wydaje mi się, że dotyczy to również krytyki artystycznej: krytyk ma prawo zaszufladkować, ocenić, porównać, ale nie przymuszać do zmian. Jeśli ma takie ambicje, niech sam tworzy. Jeśli artysta ugnie się – wkracza na niebezpieczną ścieżkę wyzbywania się własnej indywidualności. Można zrobić pracę na zamówienie i wtedy umiejętność słuchania życzeń protektora jest wskazana. Zaprzaństwem wobec sztuki jest tworzenie „w nurcie”, pod konkurs, pod publikę czy modę. Kiedyś pewien dziennikarz rozbawił mnie stwierdzeniem, że uprawiam „twórczość idącą w poprzek dominujących tendencji”.\n</div><div>\n</div><div>Pomiędzy grafiką i malarstwem\n</div><div>\n</div><div>Zbudowanie pomostu pomiędzy grafiką i malarstwem było czymś nieuniknionym. Tworzenie jest ciągłym przezwyciężaniem dychotomii, godzeniem przeciwieństw, skrajnych dążeń, wzajemnie znoszących się sił. W moich poczynaniach grafika stanowiła sanktuarium dyscypliny, konsekwencji, planowania a malarstwo spontaniczności, niedookreśloności, natychmiastowych efektów. Od momentu eksperymentów z fakturalnymi podkładami te dwa skrajne podejścia zaczęły dopełniać się i pozwalać na działania zarówno spontaniczne jak i planowo-precyzyjne. Zacząłem wykorzystywać techniki możliwe do zastosowania zarówno w malarstwie jak i grafice. Przygotowuję grunty fakturalne o różnych właściwościach: mniej lub bardziej elastyczne, o różnej twardości i czasie schnięcia. (może być to gesso przygotowane na bazie farby emulsyjnej, wody klejowej i pokostu, może być też klej epoksydowy z opiłkami aluminium, miedzi).\n</div><div>Każdy rodzaj gruntu przechodzi kolejne fazy plastyczności i w każdej z nich można inaczej wykorzystać jego właściwości. Pierwszy etap to gęsta masa pozwalająca na rozlewanie jej na dowolnej powierzchni i wyznaczanie jej granic. Kolejno można traktować ją jak plastelinę, nadając wstępny modelunek, odciskając faktury i korygując zarysy. Potem następuje faza spoistości porównywalnej do linorytu, gdzie powierzchnia poddaje się zdecydowanemu cięciu dłutkami i nożami. Na koniec mamy do dyspozycji materię o strukturze miękkiego metalu, podatnej na działania narzędzi wklęsłodrukowych typu igła, rylec miedziorytniczy, chwiejak, pilnik. Takie spektrum możliwości technicznych otwiera nowe możliwości ekspresji i spontaniczności przy zamierzonym zdyscyplinowanym harmonogramie wykonywania poszczególnych etapów. Niektóre z nich, zwłaszcza początkowe, wymagają szybkich decyzji i zdecydowanego działania. Z takich technologicznych eksperymentów wynikło moje malarstwo, które na dobrą sprawę może być traktowane jak wklęsłodrukowe matryce na płótnie, zespolone z odbitką, ponieważ z chęcią posługuję się metoda wcierania dłonią farby w fakturalne nierówności, wyżłobienia, krakelury czy precyzyjny ryt. Takie łączenie możliwości technologii malarskiej i graficznej ma oczywiście rodowód sięgający starożytności i występował w różnych technikach na przestrzeni dziejów: jak choćby fresk, polichromia, ikona, niello. Odczuwam więc radość z powrotu do korzeni, z sięgnięcia do genezy druku wklęsłego.\n</div><div>\n</div><div>\n</div><div>Lublin 5 maja 2009</div></div>\n            <hr class=\"line\" mbr-style=\"{'width': lineLength + '%'}\">\n        </div>\n        </div>\n</section>",
+          "_cid": "qPHML34wij",
+          "_anchor": "content9-v",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background": "linear-gradient(45deg, @color2, @bg-value)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".main": {
+              "& when (@reverseContent)": {
+                "flex-direction": "row-reverse",
+                ".mbr-section-btn": {
+                  "text-align": "right"
+                }
+              }
+            },
+            ".btn": {
+              "margin": "0 0 .5rem 0"
+            }
+          },
+          "_name": "info2",
+          "_customHTML": "<section class=\"mbr-section info2\" group=\"Info\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subttle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Text on Right/Left\" name=\"reverseContent\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/img/04.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#232323\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#dbd4b8\" condition=\"bg.type=='color'\" selected>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#25aab2\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row main justify-content-center\">\n            <div class=\"media-container-column col-12 col-lg-3 col-md-4\">\n                <div class=\"mbr-section-btn align-left py-4\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-primary\" href=\"https://www.facebook.com/arturpopekart\" target=\"_blank\">\n                    <span class=\"mbri-preview mbr-iconfont\"></span>\n                    FACEBOOK</a></div>\n            </div>\n            <div class=\"media-container-column title col-12 col-lg-7 col-md-6\">\n                <h2 mbr-if=\"showTitle\" class=\"align-right mbr-bold mbr-white pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\">\n                    CONTACT DETAILS</h2>\n                <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-right mbr-light mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\">arturpopek@gmail.com<br>For exhibitions and events please contact:<br>annpopek@gmail.com<br><br><br>&nbsp;</h3>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qPHoVAFXSn",
+          "_anchor": "info2-n",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "page1.html": {
+      "settings": {
+        "meta_descr": "Web Page Maker Description",
+        "title": "Page 1",
+        "order": 1
+      },
+      "components": []
+    }
+  }
+}
